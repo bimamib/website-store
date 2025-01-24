@@ -3,6 +3,8 @@ import Container from "./ui/container";
 import MainNav from "./main-nav";
 import getCategories from "@/actions/get-categories";
 
+export const revalidate = 0;
+
 const Navbar = async () => {
   const categories = await getCategories();
 
