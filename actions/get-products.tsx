@@ -2,7 +2,7 @@ import { Product } from "@/types";
 
 import qs from "query-string";
 
-const URL = `${process.env.PUBLIC_API_URL}/categories`;
+const URL = `${process.env.PUBLIC_API_URL}/products`;
 
 interface Query {
   categoryId?: string;
@@ -18,7 +18,7 @@ const getProducts = async (query: Query): Promise<Product[]> => {
     },
   });
 
-  const res = await fetch(URL);
+  const res = await fetch(url);
 
   return res.json();
 };
